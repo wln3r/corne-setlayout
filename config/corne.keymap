@@ -19,10 +19,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R         &kp T          &kp Y    &kp U  &kp I          &kp O    &kp P     &kp ESC
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F         &kp G          &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V         &kp B          &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp DELETE
-                         &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 SPACE    &kp RET  &mo 2  &kp BACKSPACE
+&kp TAB     &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P     &kp ESC
+&kp LSHIFT  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp DELETE
+                          &kp LEFT_WIN  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp BACKSPACE
             >;
         };
 
@@ -34,19 +34,28 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1           &kp N2       &kp N3        &kp N4         &kp N5         &kp N6                &kp N7                 &kp N8            &kp N9             &kp N0         &trans
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND     &kp DOLLAR     &kp PERCENT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDERSCORE     &kp EQUAL      &kp PLUS
-&trans  &kp TILDE        &kp GRAVE    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PIPE
-                                      &trans        &trans         &trans         &trans                &trans                 &trans
+&trans  &kp N1           &kp N2       &kp N3         &kp N4         &kp N5         &kp N6                &kp N7                 &kp N8            &kp N9             &kp N0         &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND      &kp DOLLAR     &kp PERCENT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDERSCORE     &kp EQUAL      &kp PLUS
+&trans  &kp TILDE        &kp GRAVE    &kp ASTERISK   &kp AMPERSAND  &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PIPE
+                                      &kp BACKSPACE  &trans         &kp ENTER      &trans                &trans                 &trans
             >;
         };
 
         upper_layer {
             bindings = <
 &kp F1  &kp F2           &kp F3  &kp F4      &kp F5             &kp F6                  &kp F7  &kp F8          &kp F9          &kp F10          &kp F11        &kp F12
-&trans  &kp PRINTSCREEN  &trans  &trans      &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC    &trans  &trans          &kp UP_ARROW    &trans           &kp PAGE_UP    &kp HOME
-&trans  &trans           &trans  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp END
-                                 &trans      &trans             &trans                  &trans  &trans          &trans
+&trans  &kp PRINTSCREEN  &none   &none       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC    &none   &none           &kp UP_ARROW    &none            &kp PAGE_UP    &kp HOME
+&trans  &none            &none   &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp END
+                                 &trans      &tog 3             &trans                  &trans  &trans          &trans
+            >;
+        };
+
+        toggle_layer {
+            bindings = <
+&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &kp LALT  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
